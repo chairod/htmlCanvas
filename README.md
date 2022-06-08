@@ -2,6 +2,7 @@
 การเขียน HTML Canvas บนหน้าเว็บไซด์
 ## ข้อควรทราบเบื้องต้นก่อนการเขียน canvas
 - Canvas จะมีพื้นหลังเป็น Tranparency เป็นค่าเริ่มต้นอยู่แล้ว
+- ctx.clearRect(x,y,w,h)  เท่ากับเคลียร์พื้นที่ของ Canvas ให้เป็น Transpacency
 - ต้องการเขียนค่าที่ได้จาก getImageData ของ Canvas (Return Data Type Uint8ClampArray) ให้เป็น Tranparency เขียนค่าที่ได้จาก getImageData ลงบน Canvas ตัวใหม่ (กำหนด width, height ให้พอดีกับรูปภาพที่ต้องการ) แล้วใช้ความสามารถของ ctx.canvas.toDataURL('image/png, image/webp, ...') แล้วนำค่าไปเขียนลงบน html image tag ตามตัวอย่าง
 ```  
 var ctx = document.getElementById('canvas').getContext('2d'); 
